@@ -64,7 +64,7 @@
         print('ElectricCai name is'+self.name+' year is'+str(self.year))    `
     继承：子类_init_需要实现父类_init_
 
-###文件与异常
+### 文件与异常
 * with open('',type) as file:    
     content=file.read()  :读取文件全部内容
     content=file.readLines(): 按行读取存读列表中
@@ -77,3 +77,20 @@
                  except：    （pass关键字表示什么都不做）
                  else：
 
+* 存储数据    
+  json.dump(value,file)   ：写入文件中
+  json.load(file) ： 读取到内存
+
+### 测试
+* 测试方法：    
+  import unittest     
+      class Test(unittest.TestCase):     
+        def test1(self):    
+          value=needtotestmenthod()   
+          self.asssertEqual(value,resultValue)    
+      unittest.main()   
+* 各种断言方法
+  ![Alt text]( 1.png)
+
+* 测试类：    
+  
