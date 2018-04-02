@@ -85,10 +85,12 @@
 * 测试方法：    
   import unittest     
       class Test(unittest.TestCase):     
-        def test1(self):    
+        def test_first(self):    
           value=needtotestmenthod()   
           self.asssertEqual(value,resultValue)    
-      unittest.main()   
+      unittest.main()  
+
+  注意方法名要以test_为前缀 
 * 各种断言方法
   ![Alt text]( 1.png)
 

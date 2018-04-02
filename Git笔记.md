@@ -43,7 +43,7 @@
     * ***远端不存在该分支时***      
       `git  push origin dev:remotedev`     
     * ***与远端进行追踪***      
-      `git branch --set-upstream dev origin/removedev`
+      `git branch --set-upstream-to origin/dev dev`
     * ***进行推送***       
       `git push`
    
