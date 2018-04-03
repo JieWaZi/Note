@@ -1,7 +1,6 @@
 # Summary
 
 * [团队合作](README.md)
-* [团队合作2](README.md)
 * [Git](git.md)
   * [GIt命令](Git笔记.md)
 * [Java](java.md)
