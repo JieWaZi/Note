@@ -1,45 +1,38 @@
 # Git学习
 
-##  相关资料
+---
 
-\[Avoid 80% of Git merge conflicts\]\[1\]
+## 相关资料
 
-\[Learn Git with Bitbucket Cloud\]\[2\]
+[Avoid 80% of Git merge conflicts](https://medium.com/front-end-hacking/avoid-80-of-merge-conflicts-with-git-rebase-b5d755a082a6)
 
-\[Git简明教程\]\[3\]
+[Learn Git with Bitbucket Cloud](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
 
-\[Git教程 廖雪峰\]\[4\]
+[Git简明教程](http://rogerdudler.github.io/git-guide/index.zh.html)
 
-\[Merge vs Rebase\]\[5\]
+[Git教程 廖雪峰](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)
 
-  
-\[1\]:https://medium.com/front-end-hacking/avoid-80-of-merge-conflicts-with-git-rebase-b5d755a082a6
+[Merge vs Rebase](https://mislav.net/2013/02/merge-vs-rebase/)
 
-\[2\]:https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
-
-\[3\]:http://rogerdudler.github.io/git-guide/index.zh.html
-
-\[4\]:https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/
-
-\[5\]:https://mislav.net/2013/02/merge-vs-rebase/
-
-  
-
-
-
+---
 
 ## 相关指令
 
 * ### 拉取远端
 
-  * **从远端分支pull 到本地分支:       `git pull origin dev:remotedev`**
+* _从远端分支pull 到本地分支_**:       **`git pull origin dev:remotedev` 
 
-  
+* ### 添加和提交
+
+  * #### git add
+
+    * _将文件的修改，文件的删除，文件的新建，添加到暂存区_:        `git add -A`
+  * #### 
 
 
-\*
+  ### 
 
-\#\#\# 添加和提交
+#### 
 
 \*
 
@@ -83,9 +76,6 @@
 
 \`git commit -a\`
 
-  
-
-
 \*
 
 \#\#\# 推送改动
@@ -119,9 +109,6 @@
 \*\*
 
 \`git push\`
-
-  
-
 
 \*
 
@@ -207,9 +194,6 @@
 
 \`git remote update origin --prune\`
 
-  
-
-
 \*
 
 \#\#\# 多人协作模式下进行推送
@@ -251,12 +235,6 @@
 \_解决完冲突在push\_
 
 \`git push\`
-
-  
-
-
-  
-
 
 \*
 
