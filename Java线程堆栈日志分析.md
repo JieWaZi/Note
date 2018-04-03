@@ -51,7 +51,8 @@ Daemon threads 将停止工作当没有其他任何非 Daemon threads 时。即�
 
 ## 日志分析
 ### 线程信息
-> "pool-2-thread-2@4853" prio=5 waiting java.lang.Thread.State: WAITING blocks pool-2-thread-2@4853     
+```java
+"pool-2-thread-2@4853" prio=5 waiting java.lang.Thread.State: WAITING blocks pool-2-thread-2@4853     
 at java.lang.Object.wait(Object.java:-1)            
 at java.lang.Thread.parkFor$(Thread.java:1220)      
 locked <0x1303> (a java.lang.Object)        
@@ -64,7 +65,7 @@ at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1038)
 at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1098)      
 at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)      
 at java.lang.Thread.run(Thread.java:818)        
-
+```
 * 线程名字：当使用 Java.lang.Thread 类生成一个线程的时候，该线程将被命名为 Thread-(Number)。但是当使用java.util.concurrent.ThreadFactory 类的时候，它将被命名为 pool-(number)-thread-(number)。
 * 优先级：代表该线程的优先级
 * 线程 ID：代表该线程的唯一 ID，（一些有用的信息，比如该线程的 CPU 使用率或者是内存使用率，都能通过该线程 ID 获取到）。
@@ -72,7 +73,8 @@ at java.lang.Thread.run(Thread.java:818)
 * 线程调用栈：代表该线程的调用栈信息
 
 ### 发生死锁信息
-> "DEADLOCK_TEST-1" daemon prio=6 tid=0x000000000690f800 nid=0x1820 waiting for monitor entry [0x000000000805f000]      
+```java
+"DEADLOCK_TEST-1" daemon prio=6 tid=0x000000000690f800 nid=0x1820 waiting for monitor entry [0x000000000805f000]      
    java.lang.Thread.State: BLOCKED (on object monitor)      
                 at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.goMonitorDeadlock(ThreadDeadLockState.java:197)        
                 - waiting to lock <0x00000007d58f5e60> (a com.nbp.theplatform.threaddump.ThreadDeadLockState$Monitor)       
@@ -82,7 +84,7 @@ at java.lang.Thread.run(Thread.java:818)
    Locked ownable synchronizers:
                 - None   
 
-> "DEADLOCK_TEST-2" daemon prio=6 tid=0x0000000006858800 nid=0x17b8 waiting for monitor entry [0x000000000815f000]        
+"DEADLOCK_TEST-2" daemon prio=6 tid=0x0000000006858800 nid=0x17b8 waiting for monitor entry [0x000000000815f000]        
    java.lang.Thread.State: BLOCKED (on object monitor)      
                 at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.goMonitorDeadlock(ThreadDeadLockState.java:197)        
                 - waiting to lock <0x00000007d58f5e78> (a com.nbp.theplatform.threaddump.ThreadDeadLockState$Monitor)       
@@ -92,7 +94,7 @@ at java.lang.Thread.run(Thread.java:818)
    Locked ownable synchronizers:
                 - None     
 
-> "DEADLOCK_TEST-3" daemon prio=6 tid=0x0000000006859000 nid=0x25dc waiting for monitor entry [0x000000000825f000]        
+"DEADLOCK_TEST-3" daemon prio=6 tid=0x0000000006859000 nid=0x25dc waiting for monitor entry [0x000000000825f000]        
    java.lang.Thread.State: BLOCKED (on object monitor)      
                 at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.goMonitorDeadlock(ThreadDeadLockState.java:197)        
                 - waiting to lock <0x00000007d58f5e48> (a com.nbp.theplatform.threaddump.ThreadDeadLockState$Monitor)       
@@ -100,7 +102,8 @@ at java.lang.Thread.run(Thread.java:818)
                 - locked <0x00000007d58f5e78> (a com.nbp.theplatform.threaddump.ThreadDeadLockState$Monitor)        
                 at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.run(ThreadDeadLockState.java:135)      
    Locked ownable synchronizers:
-                - None      
+                - None     
+``` 
 * “waiting for monitor entry”说明此线程通过 synchronized(obj) {……} 申请进入了临界区，从而进入了下图1中的“Entry Set”队列，但该 obj 对应的 monitor 被其他线程拥有，所以本线程在 Entry Set 队列中等待。
 * “parking”指线程处于挂起中。
 
