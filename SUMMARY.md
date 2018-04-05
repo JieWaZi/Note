@@ -9,7 +9,7 @@
   * [Java并发](java并发.md)
 * [SpringSecurity](springsecurity.md)
   * [Spring Security配置](Spring Security学习笔记.md)
-* Spark
+* [Spark](spark.md)
 * [Scala](scala.md)
   * [使用IDEA创建SBT的Scala工程（解决相关依赖问题）](使用IDEA创建SBT的Scala工程（解决相关依赖问题）.md)
 
