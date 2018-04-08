@@ -1,10 +1,15 @@
 # JAVA并发
-
 ---
+## 并发遇到的问题参考资料
+[Java对象锁和类锁全面解析（多线程synchronized关键字)][1]
 
-堆是线程所共享的区域  
-程序计数器是线程独享的区域
+[Java多线程和线程池][2]
 
+[理解Java中的ThreadLocal][3]
+
+[1]:https://blog.csdn.net/u013142781/article/details/51697672
+[2]:https://blog.csdn.net/u013142781/article/details/51387749
+[3]:(https://droidyue.com/blog/2016/03/13/learning-threadlocal-in-java/)  
 #### 创建线程的多种方式
 
 * 继承Thread类
